@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     public void restart(View view) {
         score = 0;
         numberOfQuestions = 0;
-        timerTextView.setText("30s");
+        timerTextView.setText("10s");
         scoreTextView.setText(score + "/" + numberOfQuestions);
         resultTextView.setText("");
         playAgainButton.setVisibility(View.INVISIBLE);
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         newQuestion();
 
-        new CountDownTimer(5100, 1000) {
+        new CountDownTimer(10100, 1000) {
             @Override
             public void onTick(long l) {
                 timerTextView.setText(Math.round(l / 1000) + "s");
